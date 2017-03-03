@@ -89,7 +89,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Suribaby">
-<meta property="og:url" content="http://Suribabe.github.io/index.html">
+<meta property="og:url" content="http://Suribabe.github.io/archives/2017/03/index.html">
 <meta property="og:site_name" content="Suribaby">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Suribaby">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://Suribabe.github.io/"/>
+  <link rel="canonical" href="http://Suribabe.github.io/archives/2017/03/"/>
 
 
 
 
 
-  <title> Suribaby </title>
+  <title> Archiv | Suribaby </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="中文 & English">
@@ -151,9 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,147 +234,67 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      Öhm..! Ein Artikel. Bleib dran.
+    </span>
+
     
+
+      
+      
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://Suribabe.github.io/2017/03/03/二叉树遍历/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Suribaby">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Suribaby">
-    </span>
-
-    
-      <header class="post-header">
-
+      
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/03/二叉树遍历/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T13:11:53-05:00">
-                2017-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          
-            <p>#二叉树前续中序后续用Stack遍历<br>二叉树遍历是老生常谈了，但是有很多码农并不能马上反应过来stack的各种遍历怎么写。今天来总结一下前续、中序、后续遍历</p>
-<p>##前续遍历<br>public List<integer> preorderTraversal(TreeNode root) {<br>    List<integer> list=new ArrayList();<br>    if(root == null) return list;<br>    Stack<treenode> stack = new Stack&lt;&gt;();<br>    stack.push(root);<br>    while(!stack.isEmpty()) {<br>        root = stack.pop();<br>        list.add(root.val);<br>        if(root.right != null) {<br>            stack.push(root.right);<br>        }<br>        if(root.left != null) {<br>            stack.push(root.left);<br>        }<br>    }<br>    return list;<br>}</treenode></integer></integer></p>
-<p>##中序遍历</p>
-<pre><code>List&lt;Integer&gt; ans=new ArrayList&lt;Integer&gt;();
-public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
-    Stack&lt;TreeNode&gt; stack = new Stack();
-    TreeNode cur = root;
-    while(cur != null || !stack.isEmpty() ) {
-        while(cur != null) {
-            stack.push(cur);
-            cur = cur.left;
-        }
-        cur = stack.pop();
-        ans.add(cur.val);
-        cur = cur.right;
-    }
-    return ans;
-}
-</code></pre><p>##后续遍历<br>public List<integer> postorderTraversal(TreeNode root) {<br>    LinkedList<integer> result = new LinkedList&lt;&gt;();<br>    Deque<treenode> stack = new ArrayDeque&lt;&gt;();<br>    TreeNode p = root;<br>    while(!stack.isEmpty() || p != null) {<br>        if(p != null) {<br>            stack.push(p);<br>            result.addFirst(p.val);  // Reverse the process of preorder<br>            p = p.right;             // Reverse the process of preorder<br>        } else {<br>            TreeNode node = stack.pop();<br>            p = node.left;           // Reverse the process of preorder<br>        }<br>    }<br>    return result;<br>}</treenode></integer></integer></p>
-
-          
+            <a class="post-title-link" href="/2017/03/03/二叉树遍历/" itemprop="url">
+              
+                <span itemprop="name">Unbenannt</span>
+              
+            </a>
         
-      
-    </div>
+      </h1>
 
-    <div>
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-03-03T13:11:53-05:00"
+              content="2017-03-03" >
+          03-03
+        </time>
+      </div>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
+
     
+
   </section>
 
   
+
 
           
           </div>
@@ -553,6 +471,12 @@ public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
   
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   
 

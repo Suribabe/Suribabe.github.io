@@ -87,12 +87,19 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="#二叉树前续中序后续用Stack遍历二叉树遍历是老生常谈了，但是有很多码农并不能马上反应过来stack的各种遍历怎么写。今天来总结一下前续、中序、后续遍历
+##前续遍历public List preorderTraversal(TreeNode root) {    List list=new ArrayList();    if(root == null) return list;    Sta">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Suribaby">
-<meta property="og:url" content="http://Suribabe.github.io/index.html">
+<meta property="og:url" content="http://Suribabe.github.io/2017/03/03/二叉树遍历/index.html">
 <meta property="og:site_name" content="Suribaby">
+<meta property="og:description" content="#二叉树前续中序后续用Stack遍历二叉树遍历是老生常谈了，但是有很多码农并不能马上反应过来stack的各种遍历怎么写。今天来总结一下前续、中序、后续遍历
+##前续遍历public List preorderTraversal(TreeNode root) {    List list=new ArrayList();    if(root == null) return list;    Sta">
+<meta property="og:updated_time" content="2017-03-03T18:14:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Suribaby">
+<meta name="twitter:description" content="#二叉树前续中序后续用Stack遍历二叉树遍历是老生常谈了，但是有很多码农并不能马上反应过来stack的各种遍历怎么写。今天来总结一下前续、中序、后续遍历
+##前续遍历public List preorderTraversal(TreeNode root) {    List list=new ArrayList();    if(root == null) return list;    Sta">
 
 
 
@@ -120,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://Suribabe.github.io/"/>
+  <link rel="canonical" href="http://Suribabe.github.io/2017/03/03/二叉树遍历/"/>
 
 
 
 
 
-  <title> Suribaby </title>
+  <title>  | Suribaby </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="中文 & English">
@@ -151,9 +158,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,9 +241,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -269,9 +274,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/03/二叉树遍历/" itemprop="url">
-                  Unbenannt
-                </a>
               
             
           </h1>
@@ -322,9 +324,7 @@
       
 
       
-        
-          
-            <p>#二叉树前续中序后续用Stack遍历<br>二叉树遍历是老生常谈了，但是有很多码农并不能马上反应过来stack的各种遍历怎么写。今天来总结一下前续、中序、后续遍历</p>
+        <p>#二叉树前续中序后续用Stack遍历<br>二叉树遍历是老生常谈了，但是有很多码农并不能马上反应过来stack的各种遍历怎么写。今天来总结一下前续、中序、后续遍历</p>
 <p>##前续遍历<br>public List<integer> preorderTraversal(TreeNode root) {<br>    List<integer> list=new ArrayList();<br>    if(root == null) return list;<br>    Stack<treenode> stack = new Stack&lt;&gt;();<br>    stack.push(root);<br>    while(!stack.isEmpty()) {<br>        root = stack.pop();<br>        list.add(root.val);<br>        if(root.right != null) {<br>            stack.push(root.right);<br>        }<br>        if(root.left != null) {<br>            stack.push(root.left);<br>        }<br>    }<br>    return list;<br>}</treenode></integer></integer></p>
 <p>##中序遍历</p>
 <pre><code>List&lt;Integer&gt; ans=new ArrayList&lt;Integer&gt;();
@@ -344,16 +344,20 @@ public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
 }
 </code></pre><p>##后续遍历<br>public List<integer> postorderTraversal(TreeNode root) {<br>    LinkedList<integer> result = new LinkedList&lt;&gt;();<br>    Deque<treenode> stack = new ArrayDeque&lt;&gt;();<br>    TreeNode p = root;<br>    while(!stack.isEmpty() || p != null) {<br>        if(p != null) {<br>            stack.push(p);<br>            result.addFirst(p.val);  // Reverse the process of preorder<br>            p = p.right;             // Reverse the process of preorder<br>        } else {<br>            TreeNode node = stack.pop();<br>            p = node.left;           // Reverse the process of preorder<br>        }<br>    }<br>    return result;<br>}</treenode></integer></integer></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -362,21 +366,22 @@ public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
       
 
       
-
+        
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -384,6 +389,10 @@ public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -553,6 +562,10 @@ public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
